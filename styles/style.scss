@@ -1,0 +1,100 @@
+// 변수
+// ----------색상
+$bg1-light:#eee; //header,card,q&A 배경
+$bg3-dark:#222; //bnr,btn,footer 배경
+$font-color-bk:#000; //
+$font-color-wh:#fff; //
+$page-disable:#ccc; //페이지번호 비활성화
+$page-active:#fff; //페이지번호 활성화
+// ------------여백
+$padding50:50px 0;
+//재사용규칙(Mixins) 선언과 호출
+//@mixin 생성규칙명
+//@include 호출규칙명
+@mixin layout { //컨텐츠 크기+가운데정렬
+    margin:0 auto;
+    width:1200px;
+}
+@mixin flex-row-between {
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between; align-items:center;
+}
+// 실행
+#header_bg {
+    background-color:$bg1-light;
+    header {
+        @include layout;
+        @include flex-row-between;
+        background:aqua; height:70px;
+        h1 {a{img{}}}
+        nav {
+            background:yellow;
+            a {margin-left:16px;}
+            a:first-child {margin:0;}
+        }
+    }//e:header
+}//header_bg end
+#slide_wrap {
+    @include layout;
+    position:relative;
+    .slide_container {
+        .slide {display:none;}
+        .slide1 {display:block;}
+    }//e:slide_container
+    .prev, .next {position:absolute;}
+    .prev {left:20px; top:45%;}
+    .next {right:20px; top:45%;}
+    .pagenation { 
+        background:brown;
+        position:absolute; left:0; bottom:50px; 
+        width:100%; text-align:center;
+        a {
+            background:$page-disable;
+            width:16px; height:16px;
+            display:inline-block;
+            border-radius:50%;
+            text-indent:-9999px;
+            margin-right:10px;
+        }
+        a.active {background:$page-active;}
+        a:last-child {margin:0;}
+    }
+}//e:slide_wrap
+#gallery_wrap {background:lime;
+    @include flex-row-between;
+    @include layout;
+    padding:$padding50;
+    .gallery {
+        width:100px; height:100px;
+        img {width:100%;}
+    }
+    .g5 {
+        width:200px; height:200px;
+    }
+}//e:gallery_wrap
+#bnr_wrap {
+    text-align:center;
+    padding:$padding50;
+    background-color:$bg3-dark;
+    span {
+        color:$font-color-wh;
+        font-size:1.375rem;
+    }
+}//e:bnr_wrap
+#card_wrap {
+    @include layout;
+    @include flex-row-between;
+    padding:$padding50;
+    .card {
+        border-radius:20px;
+        padding:20px;
+        width:22%;
+        background-color:#E5E5CB;
+        img{width:90%;}
+        .photo {width:100%; text-align:center;}
+        h2 {letter-spacing:-0.02em; font-size:1.25rem; font-weight:600;}
+        p {margin:10px 0; line-height:1.3rem; letter-spacing:-0.02em;}
+        p:nth-child(3) {line-height:1.5rem;}
+        p:last-child {margin-top:30px;}
+    }
+}//e:card_wrap

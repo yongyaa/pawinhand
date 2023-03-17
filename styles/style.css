@@ -1,0 +1,139 @@
+#header_bg {
+  background-color: #eee;
+}
+#header_bg header {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background: aqua;
+  height: 70px;
+}
+#header_bg header nav {
+  background: yellow;
+}
+#header_bg header nav a {
+  margin-left: 16px;
+}
+#header_bg header nav a:first-child {
+  margin: 0;
+}
+
+#slide_wrap {
+  margin: 0 auto;
+  width: 1200px;
+  position: relative;
+}
+#slide_wrap .slide_container .slide {
+  display: none;
+}
+#slide_wrap .slide_container .slide1 {
+  display: block;
+}
+#slide_wrap .prev, #slide_wrap .next {
+  position: absolute;
+}
+#slide_wrap .prev {
+  left: 20px;
+  top: 45%;
+}
+#slide_wrap .next {
+  right: 20px;
+  top: 45%;
+}
+#slide_wrap .pagenation {
+  background: brown;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+}
+#slide_wrap .pagenation a {
+  background: #ccc;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  text-indent: -9999px;
+  margin-right: 10px;
+}
+#slide_wrap .pagenation a.active {
+  background: #fff;
+}
+#slide_wrap .pagenation a:last-child {
+  margin: 0;
+}
+
+#gallery_wrap {
+  background: lime;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 1200px;
+  padding: 50px 0;
+}
+#gallery_wrap .gallery {
+  width: 100px;
+  height: 100px;
+}
+#gallery_wrap .gallery img {
+  width: 100%;
+}
+#gallery_wrap .g5 {
+  width: 200px;
+  height: 200px;
+}
+
+#bnr_wrap {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #222;
+}
+#bnr_wrap span {
+  color: #fff;
+  font-size: 1.375rem;
+}
+
+#card_wrap {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+#card_wrap .card {
+  border-radius: 20px;
+  padding: 20px;
+  width: 22%;
+  background-color: #E5E5CB;
+}
+#card_wrap .card img {
+  width: 90%;
+}
+#card_wrap .card .photo {
+  width: 100%;
+  text-align: center;
+}
+#card_wrap .card h2 {
+  letter-spacing: -0.02em;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+#card_wrap .card p {
+  margin: 10px 0;
+  line-height: 1.3rem;
+  letter-spacing: -0.02em;
+}
+#card_wrap .card p:nth-child(3) {
+  line-height: 1.5rem;
+}
+#card_wrap .card p:last-child {
+  margin-top: 30px;
+}/*# sourceMappingURL=style.css.map */
