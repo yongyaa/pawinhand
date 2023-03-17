@@ -110,16 +110,20 @@
 }
 #card_wrap .card {
   border-radius: 20px;
-  padding: 20px;
-  width: 22%;
+  padding: 30px 20px;
+  width: 23.5%;
   background-color: #E5E5CB;
 }
-#card_wrap .card img {
-  width: 90%;
+#card_wrap .card * {
+  padding-bottom: 10px;
+  line-height: 1.3rem;
 }
 #card_wrap .card .photo {
   width: 100%;
   text-align: center;
+}
+#card_wrap .card .photo img {
+  width: 90%;
 }
 #card_wrap .card h2 {
   letter-spacing: -0.02em;
@@ -128,12 +132,45 @@
 }
 #card_wrap .card p {
   margin: 10px 0;
-  line-height: 1.3rem;
   letter-spacing: -0.02em;
 }
-#card_wrap .card p:nth-child(3) {
-  line-height: 1.5rem;
-}
 #card_wrap .card p:last-child {
-  margin-top: 30px;
+  margin: 0;
+}
+
+#qa_wrap {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 50px 0;
+}
+#qa_wrap h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#qa_wrap #qaFrm fieldset {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+#qa_wrap #qaFrm fieldset * {
+  padding: 10px;
+  background-color: #eee;
+  border: 0;
+  margin-bottom: 16px;
+}
+#qa_wrap #qaFrm fieldset #user_qa {
+  height: 150px;
+}
+#qa_wrap #qaFrm fieldset #qa_btn {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  background-color: #222;
+  padding: 50px 0;
 }/*# sourceMappingURL=style.css.map */
