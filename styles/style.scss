@@ -13,7 +13,10 @@ $padding50:50px 0;
 //@include 호출규칙명
 @mixin layout { //컨텐츠 크기+가운데정렬
     margin:0 auto;
-    width:1200px;
+    width:calc(100% - 30px);
+    max-width:1200px;
+    min-width:320px;
+    overflow-x:hidden;
 }
 @mixin flex-row-between {
     display:flex; flex-flow:row nowrap;
@@ -65,7 +68,7 @@ $padding50:50px 0;
         a:last-child {margin:0;}
     }
 }//e:slide_wrap
-#gallery_wrap {background:lime;
+#gallery_wrap {
     @include flex-row-between;
     @include layout;
     padding:$padding50;
@@ -125,3 +128,9 @@ footer {
     color:$font-color-wh; background-color:$bg3-dark;
     padding:50px 0;
 }
+
+//media quree
+// @media screen and (max-width:1024px) {
+//     #header_bg
+//     header {background:coral;}
+// }
